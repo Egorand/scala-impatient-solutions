@@ -1,0 +1,9 @@
+# Are the res variables val or var?
+
+scala> 3
+res5: Int = 3
+
+scala> res5 = 4
+<console>:14: error: reassignment to val
+       res5 = 4
+            ^

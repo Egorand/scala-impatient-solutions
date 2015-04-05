@@ -1,0 +1,10 @@
+# How do you get the first character of a string in Scala? The last character?
+
+scala> "Hello World"
+res18: String = Hello World
+
+scala> res18.head
+res19: Char = H
+
+scala> res18.last
+res20: Char = d

@@ -1,0 +1,6 @@
+# In the Scala REPL, type 3. followed by the Tab key. What methods can be applied?
+
+scala> 3.
+%   +   >    >>>            isInstanceOf   toDouble   toLong     unary_+   |   
+&   -   >=   ^              toByte         toFloat    toShort    unary_-       
+*   /   >>   asInstanceOf   toChar         toInt      toString   unary_~

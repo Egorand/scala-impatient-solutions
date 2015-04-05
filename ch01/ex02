@@ -1,0 +1,10 @@
+# In the Scala REPL, compute the square root of 3, and then square that value. By how much # does the result differ from 3? (Hint: The res variables are your friend.)
+
+scala> import math._
+import math._
+
+scala> sqrt(3)
+res3: Double = 1.7320508075688772
+
+scala> res3 * res3
+res4: Double = 2.9999999999999996

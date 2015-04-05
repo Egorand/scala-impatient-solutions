@@ -1,0 +1,4 @@
+# What does 10 max 2 mean? In which class is the max method defined?
+
+scala> 10 max 2
+res7: Int = 10
