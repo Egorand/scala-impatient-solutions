@@ -1,0 +1,1 @@
+This repo contains solutions for the "Scala for the Impatient" exercises.
