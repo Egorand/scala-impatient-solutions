@@ -1,0 +1,19 @@
+# Write a procedure countdown(n: Int) that prints the numbers from n to 0.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+def countdown(n: Int) {
+  if (n == 0) println("0!")
+  else {
+    print(n + "... ")
+    countdown(n - 1)
+  }
+}
+
+// Exiting paste mode, now interpreting.
+
+countdown: (n: Int)Unit
+
+scala> countdown(10)
+10... 9... 8... 7... 6... 5... 4... 3... 2... 1... 0!

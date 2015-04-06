@@ -1,0 +1,11 @@
+# Come up with one situation where the assignment x = y = 1 is valid in Scala.
+# (Hint: Pick a suitable type for x.)
+
+scala> var y: Int = 3
+y: Int = 3
+
+scala> var x: Unit = ()
+x: Unit = ()
+
+scala> x = y = 1
+x: Unit = ()

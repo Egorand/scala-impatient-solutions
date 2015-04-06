@@ -1,0 +1,40 @@
+# Write a function that computes xn, where n is an integer. Use the following recursive definition:
+# • xn = y2 if n is even and positive, where y = xn / 2.
+# • xn = x· xn – 1 if n is odd and positive. • x0 = 1.
+# • xn = 1 / x–n if n is negative.
+# Don’t use a return statement.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+def pow(x: Double, n: Int): Double = {
+
+  def isEven(n: Int) = n % 2 == 0
+
+  if (n == 0) 1
+  else if (n < 0) 1 / pow(x, -n)
+  else {
+    if (isEven(n)) {
+      val y = pow(x, n / 2)
+      y * y
+    } else {
+      x * pow(x, n - 1)
+    }
+  }
+}
+
+// Exiting paste mode, now interpreting.
+
+pow: (x: Double, n: Int)Double
+
+scala> pow(5, 2)
+res3: Double = 25.0
+
+scala> pow(4, 3)
+res4: Double = 64.0
+
+scala> pow(6, 0)
+res5: Double = 1.0
+
+scala> pow(7, -1)
+res6: Double = 0.14285714285714285

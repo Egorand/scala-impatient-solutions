@@ -1,0 +1,16 @@
+# Write a for loop for computing the product of the Unicode codes of all letters in a string. For example, the product of the characters in "Hello" is 
+# 9415087488L.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+val str = "Hello"
+var product = 1L
+for (c <- str) product *= c
+println(product)
+
+// Exiting paste mode, now interpreting.
+
+9415087488
+str: String = Hello
+product: Long = 9415087488

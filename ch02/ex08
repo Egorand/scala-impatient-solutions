@@ -1,0 +1,7 @@
+# Write a function product(s : String) that computes the product, as described in the preceding exercises.
+
+scala> def product(s: String) = s.foldLeft(1L)(_ * _)
+product: (s: String)Long
+
+scala> product("Hello")
+res8: Long = 9415087488

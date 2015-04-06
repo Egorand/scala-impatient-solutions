@@ -1,0 +1,4 @@
+# Solve the preceding exercise without writing a loop. (Hint: Look at the StringOps Scaladoc.)
+
+scala> "Hello".foldLeft(1L)(_ * _)
+res7: Long = 9415087488
