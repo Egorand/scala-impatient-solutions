@@ -1,0 +1,26 @@
+# Given an array of integers, produce a new array that contains all positive values of the original array, in their original order, followed by all values # that are zero or negative, in their original order.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+val a = Array(-9, 0, 15, -3, 72, 6)
+val result = new Array[Int](a.length)
+var l = 0
+var r = result.length - 1
+for (i <- 0 until a.length) {
+  if (a(i) > 0) { 
+    result(l) = a(i)
+    l += 1 
+  } 
+  if (a(a.length - i - 1) <= 0) { 
+    result(r) = a(a.length - i - 1)
+    r -= 1 
+  }
+}
+
+// Exiting paste mode, now interpreting.
+
+a: Array[Int] = Array(-9, 0, 15, -3, 72, 6)
+result: Array[Int] = Array(15, 72, 6, -9, 0, -3)
+l: Int = 3
+r: Int = 2

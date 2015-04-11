@@ -1,0 +1,18 @@
+# Repeat the preceding assignment, but produce a new array with the 
+# swapped values. Use for/yield.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+val a = Array(1, 2, 3, 4, 5)
+val swapped = for (i <- (0 until a.length).toArray) yield {
+  if (i % 2 == 0) {
+    if (i == a.length - 1) a(i)
+    else a(i + 1)
+  } else a(i - 1)
+}
+
+// Exiting paste mode, now interpreting.
+
+a: Array[Int] = Array(1, 2, 3, 4, 5)
+swapped: Array[Int] = Array(2, 1, 4, 3, 5)

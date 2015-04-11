@@ -1,0 +1,15 @@
+# Write a code snippet that sets a to an array of n random integers between 0 (inclusive) and n (exclusive).
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+import scala.util.Random
+
+val n = 6
+val a = for (i <- (1 to n).toArray) yield Random.nextInt(n)
+
+// Exiting paste mode, now interpreting.
+
+import scala.util.Random
+n: Int = 6
+a: Array[Int] = Array(3, 4, 5, 1, 5, 4)

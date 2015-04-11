@@ -1,0 +1,23 @@
+# Import java.awt.datatransfer._ and make an object of type SystemFlavorMap with the call
+#
+#   val flavors = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
+#
+# Then call the getNativesForFlavor method with parameter DataFlavor.imageFlavor and get the return value as a Scala buffer. (Why this obscure class? It’s # hard to find uses of java.util.List in the standard Java library.)
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+import java.awt.datatransfer._
+import scala.collection.JavaConversions.asScalaBuffer
+import scala.collection.mutable.Buffer
+
+val flavors = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
+val natives : Buffer[String] = flavors.getNativesForFlavor(DataFlavor.imageFlavor)
+
+// Exiting paste mode, now interpreting.
+
+import java.awt.datatransfer._
+import scala.collection.JavaConversions.asScalaBuffer
+import scala.collection.mutable.Buffer
+flavors: java.awt.datatransfer.SystemFlavorMap = java.awt.datatransfer.SystemFlavorMap@243c1d97
+natives: scala.collection.mutable.Buffer[String] = Buffer(PNG, JFIF, TIFF)

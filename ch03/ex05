@@ -1,0 +1,7 @@
+# How do you compute the average of an Array[Double]?
+
+scala> val doubles = Array(3.0, 3.5, 4.0, 4.5)
+doubles: Array[Double] = Array(3.0, 3.5, 4.0, 4.5)
+
+scala> doubles.sum / doubles.size
+res16: Double = 3.75

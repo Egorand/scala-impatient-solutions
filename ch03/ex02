@@ -1,0 +1,17 @@
+# Write a loop that swaps adjacent elements of an array of integers. For example, Array(1, 2, 3, 4, 5) becomes Array(2, 1, 4, 3, 5).
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+val a = Array(1, 2, 3, 4, 5)
+for (i <- 1 until a.length by 2) {
+  val tmp = a(i)
+  a(i) = a(i - 1)
+  a(i - 1) = tmp
+}
+a
+
+// Exiting paste mode, now interpreting.
+
+a: Array[Int] = Array(2, 1, 4, 3, 5)
+res1: Array[Int] = Array(2, 1, 4, 3, 5)
